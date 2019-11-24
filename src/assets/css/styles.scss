@@ -90,6 +90,7 @@ body {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: $white;
       opacity: 0.5; /* Firefox */
+      font-weight: bold;
     }
 
     :-ms-input-placeholder {
@@ -155,6 +156,11 @@ body {
     .WindowScroller {
       width: 100%;
     }
+  }
+  &_loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   &_filterBar {
     background-color: $theme;
@@ -343,6 +349,10 @@ body {
 
 .Profile {
   margin: 0px 20%;
+  justify-content: center;
+  &_body {
+    flex: unset;
+  }
 }
 .predict-btn {
   width: 180px;

@@ -10,11 +10,12 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import ItemDetail from "./ItemDetail";
 import Profile from "./Profile";
-import PredictResult from "./PredictResult"
+import PredictResult from "./PredictResult";
 
 import APICaller from "utils/APICaller";
 import { updateLoadingAction } from "redux/actions/loading";
 import { saveUser, logout } from "redux/actions/user";
+import { routeMainStack } from "utils/common";
 
 const Root = props => {
   const {
@@ -44,8 +45,7 @@ const Root = props => {
             );
           }
           dispatch(updateLoadingAction(false));
-          !["/item-detail", "/profile", "/predict-result"].includes(pathname) &&
-            history.push("/home");
+          !routeMainStack.includes(pathname) && history.push("/home");
         })
         .catch(err => {
           dispatch(updateLoadingAction(false));

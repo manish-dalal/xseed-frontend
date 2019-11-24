@@ -1,20 +1,10 @@
 import React from "react";
 import { AutoSizer, WindowScroller, List } from "react-virtualized";
 
-import getImages from "utils/images";
-import { allTeams } from "utils/common";
-import { connect } from "react-redux";
-
-// @ts-ignore
-import colors from "assets/css/colors.scss";
-
-const { theme } = colors;
+import MatchCard from "./MatchCard";
 
 const MatchesList = props => {
-  const { matches, history, favourite_team } = props;
-  const onClick = item => {
-    history.push("/item-detail", { item });
-  };
+  const { matches } = props;
   return (
     <div className="MatchesList">
       <div className="app-container">
@@ -47,52 +37,17 @@ const MatchesList = props => {
                         key,
                         style
                       }) => {
-                        const {
-                          date,
-                          team1,
-                          team2,
-                          venue,
-                          city,
-                          season = ""
-                        } = matches[index];
-
                         return (
-                          <div key={key} style={style}>
-                            <h6 className="marginPadding">
-                              {date ? date : season}
-                            </h6>
-                            <div
-                              className="MatchCard"
-                              onClick={onClick.bind(this, matches[index])}
-                              style={{
-                                borderTopColor: favourite_team
-                                  ? allTeams[favourite_team].color
-                                  : theme
-                              }}
-                            >
-                              <div className="left-image-view MatchCard_imageView">
-                                <img
-                                  src={getImages(allTeams[team1].icon)}
-                                  className="teamImage"
-                                  alt=""
-                                />
-                              </div>
-
-                              <div className="MatchCard_detail">
-                                <div className="team-name">{team1}</div>
-                                <h6 className="marginPadding">VS</h6>
-                                <div className="team-name">{team2}</div>
-                                <div className="venue">{`${venue}, ${city}`}</div>
-                              </div>
-                              <div className="right-image-view MatchCard_imageView">
-                                <img
-                                  src={getImages(allTeams[team2].icon)}
-                                  className="teamImage"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                          </div>
+                          <MatchCard
+                            item={matches[index]}
+                            {...{
+                              index,
+                              isScrolling,
+                              isVisible,
+                              key,
+                              style
+                            }}
+                          />
                         );
                       }}
                     />
@@ -107,9 +62,4 @@ const MatchesList = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    favourite_team: state.userReducer.favourite_team
-  };
-};
-export default connect(mapStateToProps)(MatchesList);
+export default MatchesList;

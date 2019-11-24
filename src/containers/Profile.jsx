@@ -105,7 +105,7 @@ const Profile = props => {
             // className="Login_btn"
             style={{
               width: "100%",
-              marginTop: 10,
+              margin: "10px 0 20px",
               border: 0,
               fontWeight: "bold",
               backgroundColor: favourite_team

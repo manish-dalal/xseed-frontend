@@ -18,7 +18,6 @@ const APICaller = ({
     let url = `${apiBaseUrl}/api/${reqUrl}`;
     headers = token ? { ...headers, Authorization: token } : headers;
     // console.log(url, "data", data, "method", method, "header", headers);
-
     let options = {
       method,
       url,
@@ -32,22 +31,6 @@ const APICaller = ({
         resolve(response);
       })
       .catch(error => {
-        // if (
-        //   error.response !== undefined &&
-        //   error.response.status === 401 &&
-        //   error.response &&
-        //   error.response.data &&
-        //   error.response.data.status === "Unauthorized" &&
-        //   error.response.data.message === "Invalid token provided"
-        // ) {
-        //   // store.dispatch(logout());
-        // }
-        // console.log(
-        //   "%c{err}",
-        //   "color: red",
-        //   ` => [${apiBaseUrl}/api/${reqUrl}] >>`,
-        //   error.response
-        // ); // eslint-disable-line no-console
         reject(error);
       });
   });

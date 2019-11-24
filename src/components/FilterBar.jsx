@@ -25,6 +25,7 @@ function FilterBar(props) {
   };
   const onClickPredict = () => {
     props.history.push("/predict-result");
+    dispatch(itemsFilterChange({ sort: "", order: "", search: "" }));
   };
   return (
     <div

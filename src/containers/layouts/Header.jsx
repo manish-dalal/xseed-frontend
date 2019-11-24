@@ -65,6 +65,7 @@ const Header = props => {
     props.history.push("/home");
   };
   const moveToProfile = () => {
+    dispatch(itemsFilterChange({ sort: "", order: "", search: "" }));
     props.history.push("/profile");
   };
 

@@ -3,6 +3,7 @@ import ActionTypes from "../constants/ActionTypes";
 const initialState = {
   items: [],
   itemsApiInProgress: false,
+  totalItemCount: 1,
   filters: {
     search: "",
     sort: "",
@@ -24,7 +25,8 @@ const itemsReducer = (state = initialState, action) => {
       });
     case ActionTypes.GET_ITEMS_SUCCESS:
       return Object.assign({}, state, {
-        items: [...state.items, ...action.payload],
+        items: [...state.items, ...action.payload[0]],
+        totalItemCount: action.payload[1],
         itemsApiInProgress: false,
         filters: {
           ...state.filters,

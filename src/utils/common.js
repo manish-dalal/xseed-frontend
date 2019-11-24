@@ -1,3 +1,5 @@
+export const routeMainStack = ["/item-detail", "/profile", "/predict-result"];
+
 export const months = [
   {
     abbreviation: "Jan",
@@ -115,11 +117,6 @@ export const allTeams = {
     icon: "PuneWarriorsIndiaLogo",
     bg: "PuneWarriorsIndia",
     color: "#40E0D0"
-  },
-  "Rising Pune Supergiants": {
-    icon: "RisingPuneSupergiantsLogo",
-    bg: "RisingPuneSupergiants",
-    color: "#2C04A2"
   }
 };
 
