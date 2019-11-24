@@ -32,6 +32,9 @@ const PredictResult = props => {
   const [validationTossWinnerMsg, setValidationTossWinnerMsg] = useState(false);
   const [validationMsg, setValidationMsg] = useState("");
 
+  const [result, setResult] = useState("");
+  const onDismiss = () => setResult("");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [props.location]);
@@ -51,16 +54,17 @@ const PredictResult = props => {
         .map(([key, val]) => `${key}=${val}`)
         .join("&");
 
-      console.log("urlParms", urlParms);
-
       props.dispatch(updateLoadingAction(true));
+      setResult("");
       APICaller({
         method: "GET",
         reqUrl: `posts/predict?${urlParms}`
       })
         .then(res => {
           props.dispatch(updateLoadingAction(false));
-          // props.history.push("/home");
+          [firstTeam, secondTeam].includes(res.data)
+            ? setResult(res.data)
+            : setResult(tossWinner);
         })
         .catch(err => {
           props.dispatch(updateLoadingAction(false));
@@ -103,7 +107,9 @@ const PredictResult = props => {
     }
     return true;
   };
-
+  let secondTeamOption = Object.keys(allTeams).filter(
+    team => team !== firstTeam
+  );
   return (
     <div className="Profile  Home">
       <div className="Profile_body ItemDetail_body">
@@ -118,6 +124,9 @@ const PredictResult = props => {
               id="firstTeam"
               onChange={event => {
                 setFirstTeam(event.target.value);
+                if (event.target.value === secondTeam) {
+                  setSecondTeam("");
+                }
                 validateForm(event.target.name);
               }}
               value={firstTeam}
@@ -145,7 +154,7 @@ const PredictResult = props => {
               value={secondTeam}
             >
               <option value="">Select second team</option>
-              {Object.keys(allTeams).map((teamName, key) => (
+              {secondTeamOption.map((teamName, key) => (
                 <option key={key}>{teamName}</option>
               ))}
             </CustomInput>
@@ -188,10 +197,16 @@ const PredictResult = props => {
               }}
               value={tossWinner}
             >
-              <option value="">Select toss winner team</option>
-              {Object.keys(allTeams).map((teamName, key) => (
-                <option key={key}>{teamName}</option>
-              ))}
+              <option value="">
+                {firstTeam && secondTeam
+                  ? "Select toss winner team"
+                  : "First select team1 and team2"}
+              </option>
+              {firstTeam && secondTeam
+                ? [firstTeam, secondTeam].map((teamName, key) => (
+                    <option key={key}>{teamName}</option>
+                  ))
+                : void 0}
             </CustomInput>
             <FormFeedback>
               {validationTossWinnerMsg ? validationTossWinnerMsg : ""}
@@ -207,7 +222,7 @@ const PredictResult = props => {
             // className="Login_btn"
             style={{
               width: "100%",
-              marginTop: 10,
+              margin: "10px 0 20px",
               border: 0,
               fontWeight: "bold",
               backgroundColor: favourite_team
@@ -218,6 +233,11 @@ const PredictResult = props => {
             PREDICT
           </Button>
         </Form>
+        <Alert color="success" isOpen={result} toggle={onDismiss}>
+          <h4 className="alert-heading">Chances of winning</h4>
+          <hr />
+          <p className="mb-0">{result}</p>
+        </Alert>
       </div>
     </div>
   );

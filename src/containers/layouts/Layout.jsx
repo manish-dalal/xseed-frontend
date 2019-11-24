@@ -24,7 +24,7 @@ const Layout = props => {
           backgroundImage: `url(${getImage(
             favourite_team ? allTeams[favourite_team].bg : "defaultBg"
           )})`,
-          backgroundPosition: "center",
+          backgroundPosition: "top",
           backgroundSize: "cover"
         }}
       ></div>

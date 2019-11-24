@@ -97,7 +97,13 @@ function Login(props) {
     setIsModalOpen(false);
   };
   return (
-    <Modal isOpen={isModalOpen} toggle={() => {}} className="Login" centered>
+    <Modal
+      isOpen={isModalOpen}
+      toggle={() => {}}
+      className="Login"
+      centered
+      backdrop={false}
+    >
       <ModalBody className="Login_body">
         <h2 className="title">ACCOUNT LOGIN</h2>
         <Form onSubmit={handleSubmit}>
