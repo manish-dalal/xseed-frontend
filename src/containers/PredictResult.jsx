@@ -13,7 +13,6 @@ import { connect } from "react-redux";
 import APICaller from "utils/APICaller";
 import { allTeams, allVenue } from "utils/common";
 import { updateLoadingAction } from "redux/actions/loading";
-import { saveUser } from "redux/actions/user";
 import { isEmptyString } from "utils/validators";
 
 // @ts-ignore

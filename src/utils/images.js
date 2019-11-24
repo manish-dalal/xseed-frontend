@@ -25,7 +25,7 @@ import RajasthanRoyals from "assets/img/RajasthanRoyals.jpg";
 import DeccanChargers from "assets/img/DeccanChargers.jpg";
 import KochiTuskersKerala from "assets/img/KochiTuskersKerala.jpg";
 import PuneWarriorsIndia from "assets/img/PuneWarriorsIndia.jpg";
-import KingsPunjab from "assets/img/KingsPunjab.jpg"
+import KingsPunjab from "assets/img/KingsPunjab.jpg";
 
 const images = {
   logo,
@@ -55,7 +55,6 @@ const images = {
   DeccanChargers,
   KochiTuskersKerala,
   PuneWarriorsIndia,
-  RisingPuneSupergiants,
   KingsPunjab
 };
 export default function(imageName) {

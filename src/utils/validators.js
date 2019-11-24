@@ -1,6 +1,7 @@
 export const isValidPassword = value => {
   if (value) {
     if (
+      // eslint-disable-next-line
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})/.test(
         value
       )
@@ -9,7 +10,6 @@ export const isValidPassword = value => {
     } else {
       return "Password is not strong";
     }
-    return false;
   }
   return "Password is required";
 };

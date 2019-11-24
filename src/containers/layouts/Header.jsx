@@ -105,7 +105,7 @@ const Header = props => {
           void 0
         )}
       </div>
-      <div style={{ minWidth: 35 }}>
+      <div style={{ minWidth: 85 }}>
         <UncontrolledDropdown>
           <DropdownToggle tag="a" className="nav-link dropdown-link" caret>
             <FaUserCircle className="Header_icon" size={36} />
