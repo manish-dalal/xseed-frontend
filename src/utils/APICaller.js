@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiBaseUrl = process.env.REACT_APP_SERVER_URL || "http://localhost:3000";
+const apiBaseUrl = process.env.REACT_APP_SERVER_URL || "https://ipl-server.herokuapp.com";
 
 const APICaller = ({
   method = "get",
