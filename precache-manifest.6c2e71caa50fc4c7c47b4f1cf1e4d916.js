@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4bf7a6503360da46d1dc8549f5052431",
+    "revision": "f1855c73b85ae2cdfa62ba0b26b645e6",
     "url": "/xseed-frontend/index.html"
   },
   {
-    "revision": "f7574efbefe30c830640",
+    "revision": "2edf20badb1483af8dca",
     "url": "/xseed-frontend/static/css/2.8801471a.chunk.css"
   },
   {
-    "revision": "babcc28bbafbb80fefe7",
+    "revision": "2ba98bb37c51e152b5e9",
     "url": "/xseed-frontend/static/css/main.4bb1ec7e.chunk.css"
   },
   {
-    "revision": "f7574efbefe30c830640",
-    "url": "/xseed-frontend/static/js/2.d3d293c1.chunk.js"
+    "revision": "2edf20badb1483af8dca",
+    "url": "/xseed-frontend/static/js/2.1d72b6f3.chunk.js"
   },
   {
-    "revision": "babcc28bbafbb80fefe7",
-    "url": "/xseed-frontend/static/js/main.58f3c5d5.chunk.js"
+    "revision": "2ba98bb37c51e152b5e9",
+    "url": "/xseed-frontend/static/js/main.7b75a139.chunk.js"
   },
   {
     "revision": "2ab0b5c1218db6cc80fe",
