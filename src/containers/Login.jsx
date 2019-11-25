@@ -115,7 +115,6 @@ function Login(props) {
               onChange={handleInputChange}
               name="email"
               value={email}
-              maxLength={20}
               placeholder="Enter email"
             />
             <FormFeedback>
