@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/xseed-frontend/static/css/main.4bb1ec7e.chunk.css",
-    "main.js": "/xseed-frontend/static/js/main.9ef0f447.chunk.js",
-    "main.js.map": "/xseed-frontend/static/js/main.9ef0f447.chunk.js.map",
+    "main.js": "/xseed-frontend/static/js/main.dc54d8ab.chunk.js",
+    "main.js.map": "/xseed-frontend/static/js/main.dc54d8ab.chunk.js.map",
     "runtime-main.js": "/xseed-frontend/static/js/runtime-main.de77c3d8.js",
     "runtime-main.js.map": "/xseed-frontend/static/js/runtime-main.de77c3d8.js.map",
     "static/css/2.8801471a.chunk.css": "/xseed-frontend/static/css/2.8801471a.chunk.css",
     "static/js/2.d3d293c1.chunk.js": "/xseed-frontend/static/js/2.d3d293c1.chunk.js",
     "static/js/2.d3d293c1.chunk.js.map": "/xseed-frontend/static/js/2.d3d293c1.chunk.js.map",
     "index.html": "/xseed-frontend/index.html",
-    "precache-manifest.393e3f5a1a8cb54980f011a1565baea8.js": "/xseed-frontend/precache-manifest.393e3f5a1a8cb54980f011a1565baea8.js",
+    "precache-manifest.28dea5450796f0d2a4d8116fc57a8585.js": "/xseed-frontend/precache-manifest.28dea5450796f0d2a4d8116fc57a8585.js",
     "service-worker.js": "/xseed-frontend/service-worker.js",
     "static/css/2.8801471a.chunk.css.map": "/xseed-frontend/static/css/2.8801471a.chunk.css.map",
     "static/css/main.4bb1ec7e.chunk.css.map": "/xseed-frontend/static/css/main.4bb1ec7e.chunk.css.map",
@@ -47,6 +47,6 @@
     "static/css/2.8801471a.chunk.css",
     "static/js/2.d3d293c1.chunk.js",
     "static/css/main.4bb1ec7e.chunk.css",
-    "static/js/main.9ef0f447.chunk.js"
+    "static/js/main.dc54d8ab.chunk.js"
   ]
 }
