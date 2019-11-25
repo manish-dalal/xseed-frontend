@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4bf7a6503360da46d1dc8549f5052431",
+    "revision": "469b192a8907227cc852aed3fe0f53a0",
     "url": "/xseed-frontend/index.html"
   },
   {
-    "revision": "f7574efbefe30c830640",
+    "revision": "0ba8b2ffb9f2dadd5b5d",
     "url": "/xseed-frontend/static/css/2.8801471a.chunk.css"
   },
   {
-    "revision": "babcc28bbafbb80fefe7",
-    "url": "/xseed-frontend/static/css/main.4bb1ec7e.chunk.css"
+    "revision": "720ea7afc62cece971f8",
+    "url": "/xseed-frontend/static/css/main.6bd45b7d.chunk.css"
   },
   {
-    "revision": "f7574efbefe30c830640",
-    "url": "/xseed-frontend/static/js/2.d3d293c1.chunk.js"
+    "revision": "0ba8b2ffb9f2dadd5b5d",
+    "url": "/xseed-frontend/static/js/2.164e7bfe.chunk.js"
   },
   {
-    "revision": "babcc28bbafbb80fefe7",
-    "url": "/xseed-frontend/static/js/main.58f3c5d5.chunk.js"
+    "revision": "720ea7afc62cece971f8",
+    "url": "/xseed-frontend/static/js/main.9126dd7d.chunk.js"
   },
   {
     "revision": "2ab0b5c1218db6cc80fe",

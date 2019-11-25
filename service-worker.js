@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/xseed-frontend/precache-manifest.8c034ee18a9a4246f050d89511af20e6.js"
+  "/xseed-frontend/precache-manifest.45ef5dc104392d6940caaefd0a8f2ca0.js"
 );
 
 self.addEventListener('message', (event) => {
