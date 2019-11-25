@@ -6,9 +6,10 @@ import { FaSearchMinus } from "react-icons/fa";
 import { getItems } from "redux/actions/getItem";
 import FilterBar from "components/FilterBar";
 import MatchesList from "components/MatchesList";
+import SkeltonCard from "components/SkeltonCard";
 
 const Home = props => {
-  const {
+  let {
     dispatch,
     items,
     history,
@@ -25,6 +26,9 @@ const Home = props => {
   const loadMore = () => {
     !itemsApiInProgress && dispatch(getItems());
   };
+  if (itemsApiInProgress && items.length === 0) {
+    items = [{}, {}, {}, {}, {}, {}];
+  }
 
   return (
     <div className="Home">
@@ -38,8 +42,8 @@ const Home = props => {
               style={{ width: "100%" }}
               hasMore={skip < totalItemCount ? true : false}
               loader={
-                <div className="loader" key={0}>
-                  Loading ...
+                <div className="MatchesList" style={{ paddingBottom: 10 }}>
+                  <SkeltonCard key="loading" />
                 </div>
               }
             >

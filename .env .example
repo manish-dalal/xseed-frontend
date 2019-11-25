@@ -1,1 +1,2 @@
-REACT_APP_SERVER_URL=http://localhost:3004
+REACT_APP_SERVER_URL=https://ipl-server.herokuapp.com
+REACT_APP_PUBLIC_URL=xseed-frontend/

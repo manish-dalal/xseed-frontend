@@ -44,9 +44,7 @@ const Header = props => {
       itemsFilterChange({ search: value, sort: "", order: "", skip: 0 })
     );
 
-    if (value.length > 2) {
-      delayedQuery(value);
-    }
+    delayedQuery(value);
   };
   const clearSearch = () => {
     dispatch(itemsFilterChange({ search: "", sort: "", order: "", skip: 0 }));

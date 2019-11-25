@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import getImages from "utils/images";
 import { allTeams } from "utils/common";
@@ -15,6 +16,34 @@ function MatchCard(props) {
   const onClick = () => {
     history.push("/item-detail", { item });
   };
+  if (!date && !team1 && !team2 && !venue && !city && !season) {
+    return (
+      <div
+        className="MatchCard"
+        key={key}
+        style={{
+          ...style,
+          borderTopColor: favourite_team
+            ? allTeams[favourite_team].color
+            : theme,
+          display: "block",
+          height: 140,
+          margin: "20px 0px"
+        }}
+      >
+        <SkeletonTheme
+          color="rgba(227, 247, 250, 0.8)"
+          highlightColor={
+            favourite_team ? allTeams[favourite_team].color : theme
+          }
+        >
+          <p style={{ margin: "20px 10px 0" }}>
+            <Skeleton count={4} />
+          </p>
+        </SkeletonTheme>
+      </div>
+    );
+  }
   return (
     <div key={key} style={style}>
       <h6 className="marginPadding">{date ? date : season}</h6>
