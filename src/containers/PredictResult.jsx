@@ -234,7 +234,7 @@ const PredictResult = props => {
           </Button>
         </Form>
         <Alert color="success" isOpen={result} toggle={onDismiss}>
-          <h4 className="alert-heading">Chances of winning</h4>
+          <h4 className="alert-heading">Winning team (probable)</h4>
           <hr />
           <p className="mb-0">{result}</p>
         </Alert>
