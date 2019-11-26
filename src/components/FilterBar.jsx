@@ -58,7 +58,7 @@ function FilterBar(props) {
                   : "none"
             }}
           >
-            Season by ascending
+            Sort by season asc
           </DropdownItem>
           <DropdownItem
             active={filters.order === "desc" ? true : false}
@@ -72,7 +72,7 @@ function FilterBar(props) {
                   : "none"
             }}
           >
-            Season by descending
+            Sort by season desc
           </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
