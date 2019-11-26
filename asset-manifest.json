@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/xseed-frontend/static/css/main.6bd45b7d.chunk.css",
+    "main.css": "/xseed-frontend/static/css/main.321aa7e8.chunk.css",
     "main.js": "/xseed-frontend/static/js/main.1747b1eb.chunk.js",
     "main.js.map": "/xseed-frontend/static/js/main.1747b1eb.chunk.js.map",
     "runtime-main.js": "/xseed-frontend/static/js/runtime-main.de77c3d8.js",
@@ -9,10 +9,10 @@
     "static/js/2.164e7bfe.chunk.js": "/xseed-frontend/static/js/2.164e7bfe.chunk.js",
     "static/js/2.164e7bfe.chunk.js.map": "/xseed-frontend/static/js/2.164e7bfe.chunk.js.map",
     "index.html": "/xseed-frontend/index.html",
-    "precache-manifest.6a978ef352d5abb359ac6277f54f60e8.js": "/xseed-frontend/precache-manifest.6a978ef352d5abb359ac6277f54f60e8.js",
+    "precache-manifest.ecfa5ffb06bd971df7a67798a25094f6.js": "/xseed-frontend/precache-manifest.ecfa5ffb06bd971df7a67798a25094f6.js",
     "service-worker.js": "/xseed-frontend/service-worker.js",
     "static/css/2.8801471a.chunk.css.map": "/xseed-frontend/static/css/2.8801471a.chunk.css.map",
-    "static/css/main.6bd45b7d.chunk.css.map": "/xseed-frontend/static/css/main.6bd45b7d.chunk.css.map",
+    "static/css/main.321aa7e8.chunk.css.map": "/xseed-frontend/static/css/main.321aa7e8.chunk.css.map",
     "static/media/ChennaiSuperKings.jpg": "/xseed-frontend/static/media/ChennaiSuperKings.7c0ce41f.jpg",
     "static/media/ChennaiSuperKingsLogo.png": "/xseed-frontend/static/media/ChennaiSuperKingsLogo.fb4dc6c9.png",
     "static/media/DeccanChargers.jpg": "/xseed-frontend/static/media/DeccanChargers.9fb08efc.jpg",
@@ -46,7 +46,7 @@
     "static/js/runtime-main.de77c3d8.js",
     "static/css/2.8801471a.chunk.css",
     "static/js/2.164e7bfe.chunk.js",
-    "static/css/main.6bd45b7d.chunk.css",
+    "static/css/main.321aa7e8.chunk.css",
     "static/js/main.1747b1eb.chunk.js"
   ]
 }
