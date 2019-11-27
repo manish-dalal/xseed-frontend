@@ -62,7 +62,7 @@ const PredictResult = props => {
       })
         .then(res => {
           props.dispatch(updateLoadingAction(false));
-          [firstTeam, secondTeam].includes(res.data)
+          [firstTeam, secondTeam].includes(res.data.trim())
             ? setResult(res.data)
             : setResult(tossWinner);
         })
@@ -233,7 +233,11 @@ const PredictResult = props => {
             PREDICT
           </Button>
         </Form>
-        <Alert color="success" isOpen={result} toggle={onDismiss}>
+        <Alert
+          color="success"
+          isOpen={result ? true : false}
+          toggle={onDismiss}
+        >
           <h4 className="alert-heading">Winning team (probable)</h4>
           <hr />
           <p className="mb-0">{result}</p>
